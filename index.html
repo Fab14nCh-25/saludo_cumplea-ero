@@ -5,53 +5,112 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>¡Feliz cumple, DAYANAAA! 🧁⭐</title>
   <style>
-    :root{
-      --bg:#004e92;
-      --card:#0077b6;
-      --accent:#ffd60a;
-      --accent2:#caf0f8;
-      --text:#f8fafc;
-      --muted:#cbd5e1;
+    :root {
+      --bg: #004e92;
+      --card: #0077b6;
+      --accent: #ffd60a;
+      --accent2: #caf0f8;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
     }
-    body{
-      margin:0; font-family:'Poppins',sans-serif;
-      background:linear-gradient(135deg,#004e92,#0077b6 60%);
-      color:var(--text);
-      min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px;
-      overflow:hidden;
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #004e92, #0077b6 60%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      overflow: hidden;
     }
-    .card{
-      width:900px; max-width:96%; background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));
-      border-radius:22px; padding:32px; box-shadow:0 10px 40px rgba(0,0,0,0.5);
-      text-align:center; position:relative; overflow:hidden; z-index:2;
+    .card {
+      width: 900px;
+      max-width: 96%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
     }
-    .cake{
-      font-size:60px; animation:bounce 1.5s infinite; margin-bottom:12px;
+    .cake {
+      font-size: 60px;
+      animation: bounce 1.5s infinite;
+      margin-bottom: 12px;
     }
-    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-    .title{
-      font-size:32px; font-weight:700; margin-bottom:12px;
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
-    .heart{font-size:38px; animation:beat 1.4s infinite; color:var(--accent)}
-    @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
-    .banner{
-      font-size:28px; font-weight:600; color:#ffe066; margin:10px 0;
-      text-shadow:2px 2px 6px rgba(0,0,0,0.6);
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
-    .message{
-      font-size:20px; line-height:1.6; margin-top:20px; margin-bottom:20px; color:var(--text);
+    .heart {
+      font-size: 38px;
+      animation: beat 1.4s infinite;
+      color: var(--accent);
     }
-    .signature{
-      margin-top:18px; font-style:italic; color:var(--muted); min-height:24px;
+    @keyframes beat {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
     }
-    .btn{margin-top:20px; padding:12px 20px; border:none; border-radius:14px; background:linear-gradient(90deg,var(--accent),#ffd6a5); color:#000; font-weight:600; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.4)}
-    .btn:hover{opacity:0.9}
-    .hearts-bg span{
-      position:absolute; font-size:24px; color:rgba(255,255,255,0.15);
+    .banner {
+      font-size: 28px;
+      font-weight: 600;
+      color: #ffe066;
+      margin: 10px 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    .message {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .signature {
+      margin-top: 18px;
+      font-style: italic;
+      color: var(--muted);
+      min-height: 24px;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(90deg, var(--accent), #ffd6a5);
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .btn:hover { opacity: 0.9; }
+    .hearts-bg span {
+      position: absolute;
+      font-size: 24px;
+      color: rgba(255,255,255,0.15);
       animation: float 6s linear infinite;
     }
-    @keyframes float{0%{transform:translateY(100vh)}100%{transform:translateY(-10vh)}}
-    canvas#confetti{position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1;}
+    @keyframes float {
+      0% { transform: translateY(100vh); }
+      100% { transform: translateY(-10vh); }
+    }
+    canvas#confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
@@ -60,23 +119,23 @@
     <div class="hearts-bg" id="hearts"></div>
     <div class="cake">🧁</div>
     <div class="banner">🎉 ¡Feliz cumpleaños! 🎉</div> 
-    <div class="title">Dayana⭐</div>
+    <div class="title">Dayana ⭐</div>
     <div class="message">
       ¡Hoy es tu cumple así que! 🌊🧽  
       Que tengas una celebración tan divertida como un día con Bob Esponja y Patricio.  
       Gracias por ser esa amiga loca, divertida y única que siempre alegra el grupo 💛  
-      ¡Se q no salimos mucho pero igual feliz cumple XD!
+      ¡Sé que no salimos mucho, pero igual feliz cumple XD!
     </div>
     <button class="btn" onclick="showExtra()">Haz clic para ver la sorpresa 🐚</button>
     <div class="signature" id="extra"></div>
   </div>
 
-  <!-- 🎵 Audio divertido tipo Bob Esponja -->
-  <audio id="song" src="bob.mp3"></audio>
+  <!-- 🎵 Audio divertido de cumpleaños -->
+  <audio id="song" src="song_hb.mp3"></audio>
 
   <script>
-    function showExtra(){
-      const text = "¡Eres la Patricio de mi Bob Esponja! 💫 Gracias por existir y por tantas risas. 🧽⭐";
+    function showExtra() {
+      const text = "¡Feliz cumple, Dayana! 💫 No sabía qué más poner XD, pero igual gracias por existir y por tantas risas. 🧽⭐";
       const target = document.getElementById('extra');
       target.textContent = ""; 
       let i = 0;
@@ -85,8 +144,8 @@
       song.currentTime = 0;
       song.play();
 
-      function type(){
-        if(i < text.length){
+      function type() {
+        if (i < text.length) {
           target.textContent += text.charAt(i);
           i++;
           setTimeout(type, 60);
@@ -97,48 +156,40 @@
       type();
     }
 
+    // Estrellas flotantes
     const hearts = document.getElementById('hearts');
-    for(let i=0;i<20;i++){
-      const span=document.createElement('span');
-      span.textContent='⭐';
-      span.style.left=Math.random()*100+'%';
-      span.style.animationDuration=(4+Math.random()*4)+'s';
-      span.style.fontSize=(18+Math.random()*16)+'px';
+    for (let i = 0; i < 20; i++) {
+      const span = document.createElement('span');
+      span.textContent = '⭐';
+      span.style.left = Math.random() * 100 + '%';
+      span.style.animationDuration = (4 + Math.random() * 4) + 's';
+      span.style.fontSize = (18 + Math.random() * 16) + 'px';
       hearts.appendChild(span);
     }
 
+    // Confeti
     const c = document.getElementById('confetti');
     const ctx = c.getContext('2d');
-    function resize(){c.width=innerWidth;c.height=innerHeight;}
-    window.addEventListener('resize',resize); resize();
+    function resize() { c.width = innerWidth; c.height = innerHeight; }
+    window.addEventListener('resize', resize); resize();
     let confettiPieces = [];
-    function launchConfetti(){
-      for(let i=0;i<140;i++){
+
+    function launchConfetti() {
+      for (let i = 0; i < 140; i++) {
         confettiPieces.push({
-          x:Math.random()*c.width,
-          y:Math.random()*c.height- c.height,
-          r:Math.random()*6+4,
-          vx:Math.random()*2-1,
-          vy:Math.random()*2+1,
-          color:['#FFEA00','#00B4D8','#FB8500','#90E0EF'][Math.floor(Math.random()*4)]
+          x: Math.random() * c.width,
+          y: Math.random() * c.height - c.height,
+          r: Math.random() * 6 + 4,
+          vx: Math.random() * 2 - 1,
+          vy: Math.random() * 2 + 1,
+          color: ['#FFEA00', '#00B4D8', '#FB8500', '#90E0EF'][Math.floor(Math.random() * 4)]
         });
       }
     }
-    function frame(){
-      ctx.clearRect(0,0,c.width,c.height);
-      for(let p of confettiPieces){
+
+    function frame() {
+      ctx.clearRect(0, 0, c.width, c.height);
+      for (let p of confettiPieces) {
         p.x += p.vx;
         p.y += p.vy;
         p.vy += 0.009;
-        ctx.fillStyle = p.color;
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fill();
-      }
-      confettiPieces = confettiPieces.filter(p=>p.y < c.height+20);
-      requestAnimationFrame(frame);
-    }
-    frame();
-  </script>
-</body>
-</html>
