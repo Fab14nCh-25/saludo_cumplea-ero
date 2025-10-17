@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Feliz cumpleaños Jazmín 💕</title>
+  <title>¡Feliz cumple, DAYANAAA! 🧁⭐</title>
   <style>
     :root{
-      --bg:#0d1b2a;
-      --card:#1b263b;
-      --accent:#e63946;
-      --accent2:#f1faee;
+      --bg:#004e92;
+      --card:#0077b6;
+      --accent:#ffd60a;
+      --accent2:#caf0f8;
       --text:#f8fafc;
-      --muted: #cbd5e1;
+      --muted:#cbd5e1;
     }
     body{
-      margin:0; font-family: 'Poppins', sans-serif;
-      background:linear-gradient(135deg, #0d1b2a, #1b263b 60%);
+      margin:0; font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#004e92,#0077b6 60%);
       color:var(--text);
       min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px;
       overflow:hidden;
     }
     .card{
-      width:900px; max-width:96%; background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border-radius:22px; padding:32px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      width:900px; max-width:96%; background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));
+      border-radius:22px; padding:32px; box-shadow:0 10px 40px rgba(0,0,0,0.5);
       text-align:center; position:relative; overflow:hidden; z-index:2;
     }
     .cake{
@@ -32,19 +32,19 @@
     .title{
       font-size:32px; font-weight:700; margin-bottom:12px;
     }
-    .heart{font-size:42px; animation:beat 1.4s infinite; color:var(--accent)}
+    .heart{font-size:38px; animation:beat 1.4s infinite; color:var(--accent)}
     @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
     .banner{
       font-size:28px; font-weight:600; color:#ffe066; margin:10px 0;
       text-shadow:2px 2px 6px rgba(0,0,0,0.6);
     }
     .message{
-      font-size:20px; line-height:1.5; margin-top:20px; margin-bottom:20px; color:var(--text);
+      font-size:20px; line-height:1.6; margin-top:20px; margin-bottom:20px; color:var(--text);
     }
     .signature{
       margin-top:18px; font-style:italic; color:var(--muted); min-height:24px;
     }
-    .btn{margin-top:20px; padding:12px 20px; border:none; border-radius:14px; background:linear-gradient(90deg,var(--accent),#ff9a9e); color:#fff; font-weight:600; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.4)}
+    .btn{margin-top:20px; padding:12px 20px; border:none; border-radius:14px; background:linear-gradient(90deg,var(--accent),#ffd6a5); color:#000; font-weight:600; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.4)}
     .btn:hover{opacity:0.9}
     .hearts-bg span{
       position:absolute; font-size:24px; color:rgba(255,255,255,0.15);
@@ -58,34 +58,38 @@
   <canvas id="confetti"></canvas>
   <div class="card">
     <div class="hearts-bg" id="hearts"></div>
-    <div class="cake">🎂</div>
-    <div class="banner">🎉 Happy Birthday 🎉</div> 
-    <div class="title">Feliz cumpleaños, Jazmín <span class="heart">❤</span></div>
-    <div class="message">Hoy celebro a la mujer que hace mi mundo más brillante. Que este año te traiga tantos momentos hermosos como los que tú me regalas cada día. Eres mi alegría, mi inspiración y mi amor eterno. 💕</div>
-    <button class="btn" onclick="showExtra()">Haz clic para ver mi sorpresa</button>
+    <div class="cake">🧁</div>
+    <div class="banner">🎉 ¡Feliz cumpleaños! 🎉</div> 
+    <div class="title">Mi amiga increíble ⭐</div>
+    <div class="message">
+      ¡Hoy es tu día, camarada del Fondo de Bikini! 🌊🧽  
+      Que tengas una celebración tan divertida como un día con Bob Esponja y Patricio.  
+      Gracias por ser esa amiga loca, divertida y única que siempre alegra el grupo 💛  
+      ¡Prepárate porque vienen muchas risas, pastel y momentos legendarios!
+    </div>
+    <button class="btn" onclick="showExtra()">Haz clic para ver la sorpresa 🐚</button>
     <div class="signature" id="extra"></div>
   </div>
 
-  <!-- 🎵 Audio de tu canción -->
-  <audio id="song" src="mai.mp3"></audio>
+  <!-- 🎵 Audio divertido tipo Bob Esponja -->
+  <audio id="song" src="bob.mp3"></audio>
 
   <script>
     function showExtra(){
-      const text = "Siempre contigo, en cada sueño y en cada latido. Te amo, Jazmín ❤️";
+      const text = "¡Eres la Patricio de mi Bob Esponja! 💫 Gracias por existir y por tantas risas. 🧽⭐";
       const target = document.getElementById('extra');
       target.textContent = ""; 
       let i = 0;
 
-      // iniciar música
       const song = document.getElementById('song');
-      song.currentTime = 0; // reinicia la canción por si ya se tocó antes
+      song.currentTime = 0;
       song.play();
 
       function type(){
         if(i < text.length){
           target.textContent += text.charAt(i);
           i++;
-          setTimeout(type, 60); // velocidad del tipeo
+          setTimeout(type, 60);
         } else {
           launchConfetti();
         }
@@ -93,18 +97,16 @@
       type();
     }
 
-    // corazones flotantes
     const hearts = document.getElementById('hearts');
     for(let i=0;i<20;i++){
       const span=document.createElement('span');
-      span.textContent='❤';
+      span.textContent='⭐';
       span.style.left=Math.random()*100+'%';
       span.style.animationDuration=(4+Math.random()*4)+'s';
       span.style.fontSize=(18+Math.random()*16)+'px';
       hearts.appendChild(span);
     }
 
-    // confeti
     const c = document.getElementById('confetti');
     const ctx = c.getContext('2d');
     function resize(){c.width=innerWidth;c.height=innerHeight;}
@@ -118,7 +120,7 @@
           r:Math.random()*6+4,
           vx:Math.random()*2-1,
           vy:Math.random()*2+1,
-          color:['#FF6B6B','#FFD166','#6BCB77','#4D96FF'][Math.floor(Math.random()*4)]
+          color:['#FFEA00','#00B4D8','#FB8500','#90E0EF'][Math.floor(Math.random()*4)]
         });
       }
     }
